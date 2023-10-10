@@ -66,5 +66,34 @@
             <!-- Add your skills here -->
         </section>
     </div>
+
+
+        <title>Photo with Visual Effect</title>
+    <style>
+        /* Style for the image container */
+        .image-container {
+            position: relative;
+            width: 300px; /* Adjust the width as needed */
+            overflow: hidden;
+        }
+
+        /* Style for the image */
+        .image-container img {
+            width: 100%;
+            height: auto;
+            transition: opacity 0.3s; /* Smooth transition for the hover effect */
+        }
+
+        /* Hover effect: Reduce opacity on hover */
+        .image-container:hover img {
+            opacity: 0.7; /* Adjust the opacity value as needed */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <!-- Replace 'your-image.jpg' with the path to your image file -->
+        <img src="your-image.jpg" alt="Your Image Description">
+    </div>
 </body>
 </html>
