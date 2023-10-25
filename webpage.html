@@ -32,12 +32,37 @@
             border-radius: 2px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
+        .sidenav {width: 130px;
+            position: fixed;
+            z-index: 1;
+            top: 20px;
+            left: 10px;
+            background: #f2f2f;
+            overflow-x: hidden;
+            padding: 8px 0;
+        }
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: blue;
+            display: block;
+        }
+        .sidenav a:hover {
+            color: #064579;
+        }
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+            }
         .container {
             max-width: 800px;
             margin: 0 auto;
+            margin-left: 150px auto; 
+            padding: 0px 10px;
         }
     </style>
+    
 </head>
 <body>
     <header>
@@ -72,7 +97,7 @@
                 background-color: transparent;
                 text-decoration: underline;
             }
-       
+
 
 </style>
     </header>
@@ -88,6 +113,12 @@
                 My name is Yue Yu, you can call me Jamie, and I'm an third-year student at the <b>University of Toronto</b>, pursuing a degree in Mathematics and Statistical Science. I'm a collaborative, motivated, and diligent student who is eager to demonstrate creativity and enthusiasm in my quantitative studies.
             </p>
         </section>
+        <div class="sidenav">
+  <a href="#About Me">About Me</a>
+  <a href="#Experience">Experience</a>
+  <a href="#Interests">Interests</a>
+  <a href="#Skill Set">Skill Set</a>
+</div>
 
         <section id="experience">
             <h2>Experience</h2>
@@ -97,7 +128,15 @@
             which I have applied in various projects, including a <a href="https://public.tableau.com/views/HAMvsVER/AverageofNandCountofVERSTAPPENMax2022?:language=en-US&:display_count=n&:origin=viz_share_link"> Formula 1 (F1) related project</a>. 
             This project involved data management/querying, data analysis, and visualization using SQL for data querying and manipulation,  Python/R for data analysis as well as Tableau for creating interactive dashboards and reports to gain insights into F1 race statistics and performance metrics. 
             </p>
+        <section id="projects">
+        <h2>Projects</h2>
+        <p>Here is one part of <a href="https://public.tableau.com/shared/CWWPW79SG?:display_count=n&:origin=viz_share_link">my project </a> during last Summer.</p>
+            
+            
         </section>
+        </section>
+
+
 
         <section id="interest">
             <h2>Interests</h2>
@@ -116,6 +155,8 @@
             </p>
 
         </section>
+
+
 
         <section id="skills">
             <h2>Skill Set</h2>
@@ -148,9 +189,6 @@
 
             </p>
         </section>
-
-
-
     </div>
 
     
