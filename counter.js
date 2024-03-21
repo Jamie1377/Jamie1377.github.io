@@ -1,21 +1,24 @@
-// Function to update the count on the page
+// Check if the visitor count is stored in localStorage
+if (localStorage.getItem('visitorCount')) {
+    // If yes, get the count from localStorage
+    var count = parseInt(localStorage.getItem('visitorCount'));
+    updateCount(count);
+} else {
+    // If not, initialize count to 0
+    var count = 0;
+}
+
+// Update the count on the page
 function updateCount(count) {
     document.getElementById('visitorCount').textContent = count;
 }
 
-// Function to make an AJAX request to the PHP script
-function getVisitorCount() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'counter.php', true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            var count = parseInt(xhr.responseText);
-            updateCount(count);
-        }
-    };
-    xhr.send();
+// Increment the count and update localStorage
+function incrementCount() {
+    count++;
+    updateCount(count);
+    localStorage.setItem('visitorCount', count);
 }
 
-// Call getVisitorCount() when the page loads
-window.onload = getVisitorCount;
-
+// Call incrementCount() when the page loads
+window.onload = incrementCount;
